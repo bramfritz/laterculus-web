@@ -46,7 +46,7 @@
 <body>
 <main>
   <h1>Privacy Policy — Laterculus</h1>
-  <p class="updated">Last updated: 23 August 2026</p>
+  <p class="updated">Last updated: 26 September 2026</p>
 
   <p>Laterculus (“the app”) is a language-learning app developed by Bram Fritz (“we”, “us”).
   This policy explains what data the app handles and why. We designed Laterculus to keep
@@ -58,7 +58,10 @@
       <li>We do <strong>not</strong> use third-party analytics, advertising, or tracking.</li>
       <li>Your learning data (preferences, custom lists, hidden tiles) is stored in
         <strong>your own iCloud account</strong>, which we cannot read.</li>
-      <li>We only receive data when <strong>you choose to send it</strong> — by flagging a tile.</li>
+      <li>We only receive data when <strong>you choose to send it</strong> — by flagging a
+        tile or requesting a feature.</li>
+      <li>If you use <strong>Language Buddy</strong>, a small shared session (level, word list,
+        position) is shared through iCloud <strong>with your buddy only</strong> — not with us.</li>
       <li>Payments are handled entirely by <strong>Apple</strong>; we never see your card
         or payment details.</li>
     </ul>
@@ -70,14 +73,43 @@
   <p>Your preferences, chosen languages and level, custom lists, hidden tiles, and style
   settings are stored on your device and in <strong>your private iCloud</strong> (Apple’s
   iCloud Key-Value Storage and private CloudKit database), so they sync across your devices.</p>
-  <p>This data is tied to the Apple ID signed into your device. It lives in <em>your</em>
-  iCloud account; we have no access to it. Its handling by Apple is governed by
+  <p>This data is tied to the Apple Account signed into your device. It lives in
+  <em>your</em> iCloud account; we have no access to it. Its handling by Apple is governed by
   <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+  <p>The app has no accounts and no sign-in of its own: it uses the iCloud account your
+  device is already signed into.</p>
 
-  <h3>2. Sign in with Apple (optional)</h3>
-  <p>If you choose to sign in with Apple, the app stores the identifier Apple returns, and
-  your name and email <strong>only if you choose to share them</strong>, on your device.
-  You can use the core of the app without signing in.</p>
+  <h3>2. Language Buddy (optional, Pro)</h3>
+  <p>Language Buddy lets two people see the same word at the same time, each in their own
+  languages. It only runs if you invite someone or accept an invite.</p>
+  <p><strong>How it works.</strong> When you invite a buddy, the app creates a shared session
+  in <strong>your private iCloud</strong> and shares it using Apple’s iCloud sharing. The
+  invite is a link you send yourself (for example by Messages or AirDrop). When your buddy
+  accepts it, the session is shared between the two of you. We never receive or see it.</p>
+  <p><strong>What is shared with your buddy:</strong></p>
+  <ul>
+    <li>the shared level, learning order, and how often a new word appears;</li>
+    <li>the list of words at that level (as internal word IDs) and your shared position in
+      it, which moves when either of you skips a word;</li>
+    <li>the time zone of the person who created the invite (so both phones change words at
+      the same moment), and when the invite expires; and</li>
+    <li>your <strong>name</strong>, as it appears in your Apple Account, if iCloud sharing
+      makes it available. iCloud sharing may also show your buddy other contact details
+      Apple associates with sharing, under Apple’s rules.</li>
+  </ul>
+  <p><strong>What is not shared:</strong> your learning and translation languages, hidden
+  tiles, custom lists, personal settings, and who skipped a word or when. Skips are silent:
+  your buddy simply sees the word change.</p>
+  <p><strong>Invite links.</strong> An invite link works <strong>once</strong> and expires
+  after <strong>12 hours</strong>. Until it is accepted or expires, anyone who has the link
+  could accept it, so only send it to the person you mean to invite.</p>
+  <p><strong>Updates between phones.</strong> To keep both phones in step, the app uses
+  Apple’s push service (APNs) to send <strong>silent</strong> updates. These never show a
+  notification, badge, or sound.</p>
+  <p><strong>Ending it.</strong> You can leave at any time in Settings ▸ Language Buddy. If
+  the person who created the invite ends the session, it is deleted from their iCloud; if
+  the other person leaves, they are removed from the share. Either way, both phones go back
+  to their own words and settings.</p>
 
   <h3>3. Tile flag reports (only when you send one)</h3>
   <p>If you tap the flag button on a tile to report a problem, the app sends the following
@@ -88,31 +120,41 @@
     <li>the issue type and any note you add; and</li>
     <li>basic diagnostics: app version, iOS version, and device model (e.g. “iPhone16,2”).</li>
   </ul>
-  <p>These reports do <strong>not</strong> include your name, email, Apple ID, or any
-  advertising identifier. We use them solely to correct and improve the app’s content.</p>
 
-  <h3>4. Subscriptions and purchases</h3>
+  <h3>4. Feature requests (only when you send one)</h3>
+  <p>If you use <strong>Request a Feature</strong> (Pro), the app sends your note, your
+  selected learning and translation languages and level, and the same basic diagnostics
+  (app version, iOS version, device model) to our CloudKit database.</p>
+  <p>Flag reports and feature requests do <strong>not</strong> include your name, email,
+  Apple Account, or any advertising identifier. We use them solely to improve the app.</p>
+
+  <h3>5. Subscriptions and purchases</h3>
   <p>Laterculus Pro is an auto-renewing subscription sold through Apple. All payment
   processing is handled by Apple; <strong>we never receive your payment information</strong>.
   Apple provides us only anonymized, aggregate sales information. Your purchase entitlement
   is verified on-device via Apple’s StoreKit.</p>
 
   <h2>How we use data</h2>
-  <p>We use flag reports only to fix and improve the app’s learning content. We do not sell
-  or share any data with third parties, and we do not use it for advertising.</p>
+  <p>We use flag reports and feature requests only to fix and improve the app. We do not
+  sell or share any data with third parties, and we do not use it for advertising.</p>
 
   <h2>Data retention</h2>
   <ul>
     <li>Data in your iCloud is retained and controlled by you; delete it by removing the
       app’s data from iCloud or signing out of iCloud.</li>
-    <li>Flag reports are retained only as long as needed to address the reported issue.</li>
+    <li>A Language Buddy session exists only while it’s active: it is deleted when the person
+      who created it ends it, and an unused invite is deleted the next time the inviter opens
+      the app after it expires (an expired link can no longer be accepted either way).</li>
+    <li>Flag reports and feature requests are retained only as long as needed to act on
+      them.</li>
   </ul>
 
   <h2>Your rights</h2>
   <p>Depending on where you live (including under the EU GDPR), you may have the right to
-  access, correct, or delete data we hold about you. Because flag reports contain no
-  identifiers, we may be unable to link a report back to you; if you can identify a report
-  you submitted, contact us and we will delete it.</p>
+  access, correct, or delete data we hold about you. Because flag reports and feature
+  requests contain no identifiers, we may be unable to link one back to you; if you can
+  identify one you submitted, contact us and we will delete it. Language Buddy data is
+  stored in iCloud, not with us: you control it by leaving or ending the session.</p>
 
   <h2>Children</h2>
   <p>Laterculus is not directed at children under 13 and does not knowingly collect personal
